@@ -1,7 +1,7 @@
 {% assign directory = include.directory | default: 'img' %}
 {% assign find = include.find | default: '' %}
-
 {% assign directory_url = 'assets/' | append: directory | append: include.url | prepend: site.baseurl %}
+
 {% for file in site.static_files %}
 {% if file.path contains directory_url %}
 {% if file.path contains find %}
